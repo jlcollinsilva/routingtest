@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <base href="/" />
+</head>
+<body ng-controller="MainController as main">
+    <a ui-sref="Page1">Page 1</a> | <a ui-sref="Page2">Page 2</a> | <a ui-sref="Nowhere">Nowhere</a>
+    <hr />
+    $state.current.templateUrl = {{main.$state.current.templateUrl}}
+    <hr />
+
+    <ui-view></ui-view>
+
+    <script src="bower_components/angular/angular.min.js" charset="utf-8"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <script src="ngApp/controllers.js" charset="utf-8"></script>
+  </body>
+</html>
